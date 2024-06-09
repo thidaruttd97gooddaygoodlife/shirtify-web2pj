@@ -2,32 +2,136 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Alata', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Global Styles */
+body {
+  font-family: 'Alata', sans-serif;
+  margin: 0;
+  background-image: url('/images/Size Calculator BG.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form Styles */
+.form {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.form:hover {
+  transform: translateY(-10px);
+}
+
+.form fieldset {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.form legend {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: #FFFFFF;
+  padding: 0 5px;
+  font-size: 0.875rem;
+  color: #333333;
+  border-radius: 5px;
+  transition: top 0.3s ease-in-out;
+}
+
+.form .printed legend {
+  top: calc(50% - 12px);
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #7BA0FF;
+}
+
+.form .button {
+  background-color: #FFD4E9;
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form .button:hover {
+  background-color: #FFB6D9;
+}
+
+.form .error {
+  color: red;
+  margin-top: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gray-800 {
+  color: #333333;
+}
+
+.text-gray-700 {
+  color: #555555;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
