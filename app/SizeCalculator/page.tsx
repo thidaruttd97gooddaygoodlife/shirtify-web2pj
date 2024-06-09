@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Head from 'next/head';
-import styles from '/global.css';
+import '../SizeCalculator/globals.css';
 
 const SizeCalculator = () => {
   const [gender, setGender] = useState('');
