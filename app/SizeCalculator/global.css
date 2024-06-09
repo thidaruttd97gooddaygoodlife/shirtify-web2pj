@@ -1,0 +1,162 @@
+/* Global Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Alata', sans-serif;
+  margin: 0;
+  background-image: url('/images/Size Calculator BG.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form Styles */
+.form {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.form:hover {
+  transform: translateY(-10px);
+}
+
+/* Fieldset and Legend Styles */
+.form fieldset {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.form legend {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: #FFFFFF;
+  padding: 0 5px;
+  font-size: 0.875rem;
+  color: #333333;
+  border-radius: 5px;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.form .printed legend {
+  top: calc(50% - 12px);
+}
+
+/* Input and Select Styles */
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #7BA0FF;
+  box-shadow: 0 0 0 3px rgba(123, 160, 255, 0.2);
+}
+
+/* Button Styles */
+.form .button {
+  background-color: #FFD4E9;
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.form .button:hover {
+  background-color: #FFB6D9;
+  transform: translateY(-5px);
+}
+
+/* Error Message Styles */
+.form .error {
+  color: red;
+  margin-top: 5px;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.form .error:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Text Styles */
+.text-center {
+  text-align: center;
+}
+
+.text-gray-800 {
+  color: #333333;
+}
+
+.text-gray-700 {
+  color: #555555;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Keyframe Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
