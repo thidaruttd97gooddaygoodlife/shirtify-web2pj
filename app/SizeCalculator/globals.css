@@ -25,9 +25,10 @@ body {
 
 /* Form Styles */
 .form {
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
   padding: 40px;
   width: 100%;
   max-width: 600px;
@@ -35,6 +36,7 @@ body {
   overflow: hidden;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
+  animation: slideIn 1s ease-in;
 }
 
 .form:hover {
@@ -47,14 +49,16 @@ body {
   border: none;
   padding: 0;
   margin-bottom: 20px;
-  animation: slideIn 0.5s ease-out;
+  animation: slideIn 0.5s ease-in;
+  
+  
 }
 
 .form legend {
   position: absolute;
-  top: -15px;
+  top: 5px;
   left: 10px;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 0 5px;
   font-size: 0.875rem;
   color: #333333;
@@ -71,33 +75,37 @@ body {
 .form select {
   width: 100%;
   padding: 10px;
+  margin-top: 15px;
   border: 1px solid #CCCCCC;
   border-radius: 5px;
   outline: none;
+  cursor: pointer;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .form input:focus,
 .form select:focus {
-  border-color: #7BA0FF;
-  box-shadow: 0 0 0 3px rgba(123, 160, 255, 0.2);
+  border-color: #FF2312;
+  box-shadow: 0 0 0 5px rgba(255, 212, 233, 0.8);
 }
 
 /* Button Styles */
 .form .button {
-  background-color: #FFD4E9;
+  background-color: rgba(255, 212, 233, 0.8);
   color: #333333;
   border: none;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 12px;
+  width: 520px;
   cursor: pointer;
   outline: none;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
 
 .form .button:hover {
-  background-color: #FFB6D9;
-  transform: translateY(-5px);
+  background-color: rgba(255, 182, 217, 0.8);
+  transform: translateY(-4px);
+  backdrop-filter: brightness(1.1);
 }
 
 /* Error Message Styles */
@@ -126,10 +134,10 @@ body {
 }
 
 .text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
   transition: color 0.3s ease-in-out;
 }
 
@@ -142,10 +150,10 @@ body {
 }
 
 .text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
   transition: color 0.3s ease-in-out;
 }
 

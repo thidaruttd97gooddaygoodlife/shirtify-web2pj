@@ -52,26 +52,26 @@ const Home: React.FC = () => {
       <Head>
         <title>Sign in</title>
       </Head>
-      <div className="w-[1100px] h-[800px] bg-[#FFD4E9] rounded-[38px] mt-[62px] p-[20px]">
+      <div className="w-[1410px] h-[800px] bg-[#FFD4E9] rounded-[38px] mt-[62px] p-[20px]">
       <div className="absolute top-4 left-4">
-        <div className="ml-[513.5px] mt-[250px]">
+        <div className="ml-[528px] mt-[100px]">
         <Image 
       src="/images/violet_Model.png"
       alt="ld-block-3d-model"
-      width={800} // Adjust width as needed
-      height={600} // Adjust height as needed
+      width={1000} // Adjust width as needed
+      height={200} // Adjust height as needed
       // Or "intrinsic" or "responsive"
     />
-    <div className=" -mt-[460px] ml-[551px] ">
+    <div className=" -mt-[563px] ml-[700px] ">
      <Image 
       src="/images/white-hoop.svg"
       alt="bk-box"
-      width={168} // Adjust width as needed
+      width={200} // Adjust width as needed
       height={168} // Adjust height as needed
       // Or "intrinsic" or "responsive"
     />
     </div>
-    <div className="ml-[665px] -mt-[125px]">
+    <div className="ml-[845px] -mt-[125px]">
     <Image 
       src="/images/orange circle.svg"
       alt="box1"
@@ -80,7 +80,7 @@ const Home: React.FC = () => {
       //1
     />
     </div>
-<div className="ml-[525px] -mt-[20px] ">
+<div className="ml-[675px] -mt-[30px] ">
     <Image 
       src="/images/yellow-cube-sq.svg"
       alt="box2"
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
       //2
     />
     </div>
-<div className="ml-[540px] -mt-[180px]">
+<div className="ml-[685px] -mt-[180px]">
     <Image 
       src="/images/white circle.svg"
       alt="box3"
@@ -99,55 +99,54 @@ const Home: React.FC = () => {
     />
     </div>
 
-<div className="ml-[580px] -mt-[460px]">
+
+<div className="ml-[800px] -mt-[355px]">
     <Image 
       src="/images/painter-.svg"
       alt="box3"
-      width={280} // Adjust width as needed
-      height={430} // Adjust height as needed
+      width={220} // Adjust width as needed
+      height={300} // Adjust height as needed
       //4
     />
     </div>
     
-    <div className=" ml-[250px] -mt-[50px]">
+    <div className=" ml-[360px] -mt-[150px]">
         <Image
       src="/images/Hoodie.svg"
       alt="hoodie-3D-model"
-      width={300} // Adjust width as needed
+      width={400} // Adjust width as needed
       height={640}
       />
   </div>
 
     </div>
         </div>
-      <div className="relative w-[350px] max-w-md p-7 bg-white bg-opacity-20 rounded-3xl shadow-md backdrop-blur-md  ml-[60px] mt-[80px]">
-      <Image className='-ml-[30px]'
+      <div className="relative w-1/3 h-6/8 p-7 bg-white bg-opacity-35 rounded-3xl shadow-2xl backdrop-blur-sm  ml-[60px] mt-[43px]">
+      <Image className='-ml-[50px]'
       src="/images/Web_Logo.svg"
       alt="Image description"
-      width={200} // Adjust width as needed
+      width={250} // Adjust width as needed
       height={61} // Adjust height as needed
       // Or "intrinsic" or "responsive"
     />
     
     <form className=" space-y-6" onSubmit={handleSubmit}></form>
-   <div className='-mt-[65px] ml-[50px]'>
-    <h1 className='ml-[165px] text-[#3f7bf0] text-[13px] mt-[30px]'>No account? <a href="/Signup" className="text-blue-500 hover:underline text-loginco font-normal underline text-[13px] ">Sign Up</a></h1>  
+    <div className='-mt-[65px] ml-[50px]'>
+    <h1 className='ml-[270px] text-[#3f7bf0] text-[13px] mt-[15px]'>No account? <a href="/SignUp" className="text-blue-500 hover:underline text-loginco font-normal underline text-[15px] ">Sign Up</a></h1>  
 
     </div>
-    <div className="text-2xl mb-10 text-center font-inter font-semibold text-[55px] mt-[50px] mr-[100px] font-Alata ">Sign in</div>
+    <div className="text-2xl mb-10 font-inter font-semibold text-[60px] mt-[50px] ml-[5px] font-Alata ">Sign in</div>
     
 <div>
   
-    <div className="mt-[45px] mr-[90px] mb-8 w-[285px] py-1.5 bg-[#3F7BF0] text-white rounded-lg hover:bg-pink-500  ">
+    <div className="mt-[45px] mr-[50px] mb-8 w-[400px] py-1 bg-[#3F7BF0] text-white rounded-lg hover:bg-pink-500  ">
       
     <div className="flex ml-[20px]">
-    
-  
-       <button type="submit" className='flex'>
-                <h1 className='font-bold text-[25px] ml-[30px] '> G</h1>
-                 <h1 className='ml-[15px] mt-[8px] font-normal '> Sign in with Google</h1>
-       </button>
-            </div>
+      <button type="submit" className='flex'>
+             <h1 className='font-bold text-[25px] ml-[110px] '> G</h1>
+                 <h1 className='ml-[6px] mt-[8px] font-normal '> Sign in with Google</h1>
+      </button>
+     </div>
     </div>
 
     </div>
@@ -186,7 +185,7 @@ const Home: React.FC = () => {
             </div>
 
             <div className="flex justify-center">
-              <button type="submit" className="px-[119px] py-3 bg-black text-white rounded-lg hover:bg-pink-500 font-semibold">
+              <button type="submit" className="px-[173px] py-2 bg-black text-white rounded-lg hover:bg-pink-500 font-semibold">
                 Sign in
               </button>
             </div>

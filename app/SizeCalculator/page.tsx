@@ -32,43 +32,43 @@ const SizeCalculator = () => {
 
     // Gender
     if (!gender) {
-      newErrors.gender = 'โปรดเลือกเพศ';
+      newErrors.gender = 'Please select your gender';
       valid = false;
     }
 
     // Weight
     if (!weight) {
-      newErrors.weight = 'โปรดกรอกน้ำหนัก';
+      newErrors.weight = 'Please enter your height weight';
       valid = false;
     } else if (parseInt(weight) < 30) {
-      newErrors.weight = 'น้ำหนักต้องมากกว่าหรือเท่ากับ 30';
+      newErrors.weight = 'Oops, something went wrong! Please correct the marked fields.';
       valid = false;
     }
 
     // Height
     if (!height) {
-      newErrors.height = 'โปรดกรอกส่วนสูง';
+      newErrors.height = 'Please enter your height height';
       valid = false;
     } else if (parseInt(height) < 120) {
-      newErrors.height = 'ส่วนสูงต้องมากกว่าหรือเท่ากับ 120';
+      newErrors.height = 'Oops, something went wrong! Please correct the marked fields.';
       valid = false;
     }
 
     // Waist
     if (!waist) {
-      newErrors.waist = 'โปรดกรอกรอบเอว';
+      newErrors.waist = 'Please enter your height waist';
       valid = false;
     } else if (parseInt(waist) < 0) {
-      newErrors.waist = 'รอบเอวต้องไม่ต่ำกว่า 0';
+      newErrors.waist = 'Oops, something went wrong! Please correct the marked fields.';
       valid = false;
     }
 
     // Hip
     if (!hip) {
-      newErrors.hip = 'โปรดกรอกสะโพก';
+      newErrors.hip = 'Please enter your height hip';
       valid = false;
     } else if (parseInt(hip) < 0) {
-      newErrors.hip = 'สะโพกต้องไม่ต่ำกว่า 0';
+      newErrors.hip = 'Oops, something went wrong! Please correct the marked fields.';
       valid = false;
     }
 
@@ -118,43 +118,43 @@ const SizeCalculator = () => {
     switch (input) {
       case 'gender':
         if (!value) {
-          newErrors.gender = 'โปรดเลือกเพศ';
+          newErrors.gender = 'Please select your gender';
           valid = false;
         }
         break;
       case 'weight':
         if (!value) {
-          newErrors.weight = 'โปรดกรอกน้ำหนัก';
+          newErrors.weight = 'Please enter your weight ';
           valid = false;
         } else if (parseInt(value) < 30) {
-          newErrors.weight = 'น้ำหนักต้องมากกว่าหรือเท่ากับ 30';
+          newErrors.weight = 'Oops, something went wrong! Please correct the marked fields.';
           valid = false;
         }
         break;
       case 'height':
         if (!value) {
-          newErrors.height = 'โปรดกรอกส่วนสูง';
+          newErrors.height = 'Please enter your height';
           valid = false;
         } else if (parseInt(value) < 120) {
-          newErrors.height = 'ส่วนสูงต้องมากกว่าหรือเท่ากับ 120';
+          newErrors.height = 'Oops, something went wrong! Please correct the marked fields.';
           valid = false;
         }
         break;
       case 'waist':
         if (!value) {
-          newErrors.waist = 'โปรดกรอกรอบเอว';
+          newErrors.waist = 'Please enter your height waist';
           valid = false;
         } else if (parseInt(value) < 0) {
-          newErrors.waist = 'รอบเอวต้องไม่ต่ำกว่า 0';
+          newErrors.waist = 'Oops, something went wrong! Please correct the marked fields.';
           valid = false;
         }
         break;
       case 'hip':
         if (!value) {
-          newErrors.hip = 'โปรดกรอกสะโพก';
+          newErrors.hip = 'Please enter your height hip';
           valid = false;
         } else if (parseInt(value) < 0) {
-          newErrors.hip = 'สะโพกต้องไม่ต่ำกว่า 0';
+          newErrors.hip = 'Oops, something went wrong! Please correct the marked fields.';
           valid = false;
         }
         break;
@@ -181,15 +181,15 @@ const SizeCalculator = () => {
       else if (waistNumber <= 31 && hipNumber <= 38) calculatedSize = 'M';
       else if (waistNumber <= 34 && hipNumber <= 41) calculatedSize = 'L';
       else if (waistNumber <= 37 && hipNumber <= 44) calculatedSize = 'XL';
-      else if (waistNumber <= 40 && hipNumber <= 47) calculatedSize = 'XXL';
-      else calculatedSize = 'XXXL';
+      else if (waistNumber <= 40 && hipNumber <= 47) calculatedSize = '2XL';
+      else calculatedSize = '3XL';
     } else if (gender === 'female') {
       if (waistNumber <= 24 && hipNumber <= 34) calculatedSize = 'S';
       else if (waistNumber <= 27 && hipNumber <= 37) calculatedSize = 'M';
       else if (waistNumber <= 30 && hipNumber <= 40) calculatedSize = 'L';
       else if (waistNumber <= 33 && hipNumber <= 43) calculatedSize = 'XL';
-      else if (waistNumber <= 36 && hipNumber <= 46) calculatedSize = 'XXL';
-      else calculatedSize = 'XXXL';
+      else if (waistNumber <= 36 && hipNumber <= 46) calculatedSize = '2XL';
+      else calculatedSize = '3XL';
     }
 
     setSize(calculatedSize);
@@ -203,7 +203,7 @@ const SizeCalculator = () => {
       </Head>
       <div className="container">
         <div className={`form ${isPrinted ? 'printed' : ''}`}>
-          <h1 className="text-center text-gray-800 text-4xl b-2">Shirt Size Calculator</h1>
+          <h1 className="font-bold text-center text-gray-800 text-4xl ">Shirt Size Calculator</h1>
           <fieldset>
             <legend>Gender</legend>
             <select
@@ -257,13 +257,13 @@ const SizeCalculator = () => {
             />
             {errors.hip && <div className="error">{errors.hip}</div>}
           </fieldset>
-          <div className="text-center">
+          <div className="text-center font-bold">
             <button className="button" onClick={calculateSize}>
-              Calculate Size
+              Calculate 
             </button>
           </div>
           {size && (
-            <div className="text-center text-gray-800 text-2xl mt-4">
+            <div className="text-center text-gray-800 text-2xl mt-4 font-bold">
               Your Size: {size}
             </div>
           )}
