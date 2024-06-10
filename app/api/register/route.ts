@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // app/api/register/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { MongoClient } from 'mongodb';
@@ -34,3 +35,22 @@ export async function POST(req: NextRequest) {
         await client.close();
     }
 }
+=======
+import { NextRequest, NextResponse } from 'next/server';
+
+interface MyRequest extends NextRequest {
+  json(): Promise<any>;
+}
+export async function POST(req: MyRequest) {
+    try {
+        const { name, email, password } = await req.json();
+
+        console.log("Name: ", name);
+        console.log("Email: ", email);
+        console.log("Password: ", password);
+
+        } catch(error) {
+            return NextResponse.json({ message: "An error occured while registrating the user."}, { status: 500});
+        }
+    }
+>>>>>>> Stashed changes
