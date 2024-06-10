@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUsers, faFileInvoiceDollar, faBoxes } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 export default function Dashboard() {
   return (
@@ -8,22 +9,35 @@ export default function Dashboard() {
       {/* Sidebar */}
       <div className="w-1/5 bg-blue-300 h-screen p-5 flex flex-col items-center">
         <div className="w-full flex flex-col items-center mb-5">
-          <Image src="/profile.jpg" alt="Profile" width={80} height={80} className="rounded-full" />
+          <Image src="/images/painter-.svg" alt="Profile" width={80} height={80} className="rounded-full" />
           <button className="bg-yellow-400 text-white px-4 py-2 rounded mt-3">Admin</button>
         </div>
         <nav className="w-full flex flex-col items-start">
-          <a href="#" className="mb-3 flex items-center w-full text-left text-black hover:bg-blue-400 p-2 rounded">
-            <FontAwesomeIcon icon={faHome} className="mr-2" />Dashboard
-          </a>
-          <a href="#" className="mb-3 flex items-center w-full text-left text-black hover:bg-blue-400 p-2 rounded">
-            <FontAwesomeIcon icon={faUsers} className="mr-2" />Manage Team
-          </a>
-          <a href="#" className="mb-3 flex items-center w-full text-left text-black hover:bg-blue-400 p-2 rounded">
-            <FontAwesomeIcon icon={faFileInvoiceDollar} className="mr-2" />Invoices Balance
-          </a>
-          <a href="#" className="mb-3 flex items-center w-full text-left text-black hover:bg-blue-400 p-2 rounded">
-            <FontAwesomeIcon icon={faBoxes} className="mr-2" />Inventory Management
-          </a>
+          <Link href="/dashboard">
+            <a className="mb-3 flex items-center w-6/12 text-left text-black hover:bg-blue-400 p-2 rounded">
+              <FontAwesomeIcon icon={faHome} className="mr-2" />Dashboard
+            </a>
+          </Link>
+          <Link href="/dashboard/team">
+            <a className="mb-3 flex items-center w-5.5/12 text-left text-black hover:bg-blue-400 p-2 rounded">
+              <FontAwesomeIcon icon={faUsers} className="mr-2" />Manage Team
+            </a>
+          </Link>
+          <Link href="/dashboard/invoices">
+            <a className="mb-3 flex items-center w-5/12 text-left text-black hover:bg-blue-400 p-2 rounded">
+              <FontAwesomeIcon icon={faFileInvoiceDollar} className="mr-2" />Invoices Balance
+            </a>
+          </Link>
+          <Link href="/dashboard/inventory">
+            <a className="mb-3 flex items-center w-7/12 text-left text-black hover:bg-blue-400 p-2 rounded">
+              <FontAwesomeIcon icon={faBoxes} className="mr-2" />Inventory Management
+            </a>
+          </Link>
+          <Link href="/dashboard/products">
+            <a className="mb-3 flex items-center w-7/12 text-left text-black hover:bg-blue-400 p-2 rounded">
+              <FontAwesomeIcon icon={faBoxes} className="mr-2" />Product Management
+            </a>
+          </Link>
         </nav>
       </div>
       {/* Main Content */}
@@ -44,3 +58,4 @@ export default function Dashboard() {
     </div>
   )
 }
+

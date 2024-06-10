@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Cart = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const [items, setItems] = useState([
@@ -15,15 +15,15 @@ const Cart = () => {
     { id: 4, name: "Sweater Weather", description: "Lorem... Description", size: "X", price: 250, quantity: 1 },
   ]);
 
-  const increaseQuantity = (id) => {
+  const increaseQuantity = (id: number) => {
     setItems(items.map(item => item.id === id ? { ...item, quantity: item.quantity + 1 } : item));
   };
 
-  const removeItem = (id) => {
+  const removeItem = (id: number) => {
     setItems(items.filter(item => item.id !== id));
   };
 
-  const editItem = (id) => {
+  const editItem = (id: number) => {
     window.location.href = `/custom-design/${id}`;
   };
 
@@ -37,8 +37,8 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };

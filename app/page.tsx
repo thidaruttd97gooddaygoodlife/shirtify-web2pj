@@ -1,6 +1,5 @@
 
 "use client";
-
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from 'next/link';
@@ -8,9 +7,9 @@ import Link from 'next/link';
 export default function Home() {
     const initialItems = [
         { size: 1, title: "Cool Hoodie", price: "299 Baht", img: "/images/Rectangle 21.svg" },
-        { size: 0.85, title: "Cool Hoodie", price: "299 Baht", img: "/images/Rectangle 21.svg" },
-        { size: 0.7225, title: "Cool Hoodie", price: "299 Baht", img: "/images/Rectangle 21.svg" },
-        { size: 0.614125, title: "Cool Hoodie", price: "299 Baht", img: "/images/Rectangle 21.svg" }
+        { size: 0.85, title: "Cute Cotton", price: "299 Baht", img: "/images/Rectangle 21.svg" },
+        { size: 0.7225, title: "Sassy Crop", price: "299 Baht", img: "/images/Rectangle 21.svg" },
+        { size: 0.614125, title: "Great T-shirt", price: "299 Baht", img: "/images/Rectangle 21.svg" }
     ];
     const [items, setItems] = useState(initialItems);
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -73,7 +72,7 @@ export default function Home() {
             style={{ overflow: "hidden", cursor: 'grab' }}
         >
             <main className="flex min-h-[125vh] flex-col justify-between bg-[#7BA0FF]">
-                <div className="w-[1300px] h-[900px] bg-white mt-[80px] rounded-lg ml-[100px] relative">
+                <div className="w-[1400px] h-[900px] bg-white mt-[80px] rounded-lg ml-[100px] relative">
 
                     <div className="absolute ml-[50px] mt-[30px] ">
                         <Image 
@@ -87,7 +86,7 @@ export default function Home() {
                     
               
                    
-                    <div className="absolute ml-[840px] mt-[120px]">
+                    <div className="absolute ml-[990px] mt-[120px]">
                         <Image 
                             src="/images/Vector 59.svg"
                             alt="Logo" 
@@ -144,7 +143,7 @@ export default function Home() {
                     <p className="pt-[40px] ml-[100px]">
                         loremdacasdqewdsafsrgwisdfoo <br/>adfopsdjfpdsjfdsjfpjsdjfjsd
                     </p>
-                    <Link href="/homepage">
+                    <Link href="/SignIn">
                         <button className="bg-[#7BA0FF] text-white font-semibold py-3 px-5 rounded-full shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition mt-[30px] ml-[100px]">
                             Start Shopping
                         </button>

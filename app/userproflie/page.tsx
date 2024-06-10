@@ -21,16 +21,17 @@ export default function Home() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    if (router.query.total) {
-      setTotal(Number(router.query.total));
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('total')) {
+      setTotal(Number(params.get('total')));
     }
-  }, [router.query.total]);
+  }, []);
 
-  const handleLoginSuccess = (response) => {
+  const handleLoginSuccess = (response: any) => {
     console.log('Login Success:', response);
   };
 
-  const handleLoginFailure = (response) => {
+  const handleLoginFailure = (response: any) => {
     console.log('Login Failed:', response);
   };
 
@@ -64,8 +65,7 @@ export default function Home() {
         <div className="w-[450px] h-[750px] rounded-[40px] ml-[100px] relative mb-[100px]">
           <div className="w-[150px] h-[150px] rounded-full bg-white ml-[50px] mt-[50px]">
             <Image
-              src="/
-Ellipse_19.svg"
+              src="/Ellipse_19.svg"
               alt="Logo"
               width={150}
               height={150}
@@ -90,8 +90,8 @@ Ellipse_19.svg"
 
           <div className="flex ml-[220px] mt-[25px]">
             <GoogleLogin
-              onSuccess={handleLoginSuccess}
-              onError={handleLoginFailure}
+              onSuccess={() => handleLoginSuccess}
+              onError={() => handleLoginFailure}
             />
           </div>
 
