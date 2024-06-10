@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 "use client";
 
 import { useState, useRef, useEffect } from "react";
@@ -190,14 +190,4 @@ export default function Home() {
         </div>
     );
 }
-=======
-import React from 'react'
 
-function page() {
-  return (
-    <div>ฟวยสัมส้ม</div>
-  )
-}
-
-export default page
->>>>>>> Stashed changes
